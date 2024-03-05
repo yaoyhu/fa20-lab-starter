@@ -1,9 +1,12 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
+gdb is not supported in ARM... So, lldb instead...
+https://lldb.llvm.org/use/map.html#show-the-arguments-and-local-variables-for-the-current-frame
+
+1. run <args> 
+2. break main, b a.c:12
+3. next
+4. step
+5. continue
+6. p $(expression)
+7. display $(expression)
+8. frame variable
+9. quit

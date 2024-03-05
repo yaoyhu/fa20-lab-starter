@@ -4,3 +4,7 @@ int main() {
         a[i] = i;
     }
 }
+
+// https://clang.llvm.org/docs/LeakSanitizer.html
+// clang -fsanitize=address segfault_ex.c -g
+// leaks -atExit -- ./a.out
