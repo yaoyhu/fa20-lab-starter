@@ -1,7 +1,21 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+A simple makefile consists of “rules” with the following shape:
+
+ target … : prerequisites …
+        recipe
+        …
+        …
+
+Q: Which target is part of a rule that deletes all the compiled programs?
+A: clean
+Q: Which target is part of a rule that makes all the compiled programs?
+A: all
+Q: Which compiler is currently being used?
+A: gcc
+Q: What C standard are we currently using?
+A: -std=c99
+Q: How would we reference a variable “FOO” in a makefile?
+A: $(FOO)
+Q: What operating system does the term “Darwin” represent?
+A: Darwin is the from Apple named operating system core for Mac OS X. Darwin is Mac OS X without the user interface. 
+Q: What line creates the lfsr program from its object files? (Give its line number.)
+A: 26

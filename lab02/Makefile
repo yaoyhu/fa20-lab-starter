@@ -1,7 +1,7 @@
 UNAME_S := $(shell uname -s)
 CC=gcc
 LD=gcc
-CFLAGS=-ggdb -Wall -std=c99
+CFLAGS=-g -Wall -std=c99
 LDFLAGS=
 
 ifeq ($(UNAME_S), Darwin)
@@ -29,7 +29,10 @@ $(BIT_OPS_PROG): $(BIT_OPS_OBJS)
 	$(CC) $(CFLAGS) -g -o $(BIT_OPS_PROG) $(BIT_OPS_OBJS) $(LDFLAGS)
 
 $(LFSR_PROG): $(LFSR_OBJS)
-	$(CC) $(CFLAGS) -g -o $(LFSR_PROG) $(LFSR_OBJS) $(LDFLAGS)
+	$(CC) $(CFLAGS) -g -o $(LFSR_PROG) $(LFSR_OBJS) $(LDFLAGS) bit_ops.o
+
+$(VECTOR_PROG): $(VECTOR_OBJS)
+	$(CC) $(CFLAGS) -g -o $(VECTOR_PROG) $(VECTOR_OBJS) $(LDFLAGS)
 
 lfsr.c: lfsr.h
 test_lfsr.c: lfsr.h
